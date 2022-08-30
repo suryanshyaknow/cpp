@@ -13,7 +13,7 @@ public:
     {
         this->data1 = a;
         this->data2 = b;
-        this->data2 = c;
+        this->data3 = c;
     }
     void display()
     {
@@ -28,9 +28,11 @@ int main()
     vermillion <> f(12, 'v', 23.9);
     f.display();
     cout<< endl;
+    
     vermillion <char, char, int> f1('s', 'g', 12);
     f1.display();
     cout<< endl;
+
     vermillion <int, int, int> f2(26, 11, 1999);
     f2.display();
 

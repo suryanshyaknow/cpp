@@ -27,11 +27,14 @@ public:
         data1 = a;
         data2 = b;
     }
-    void add()
-    {
-        cout << data1 + data2 << endl;
-    }
+    void add(); // will define it out side the class
 };
+
+template <class T1, class T2>
+void MyClass<T1, T2>::add()
+{
+    cout << data1 + data2 << endl;
+}
 
 int main()
 {
