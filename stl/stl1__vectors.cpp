@@ -10,6 +10,23 @@ without having to put some size parameter as in an array.
 __> whereas In an array of 10 elements, for adding the 11th one, we’ll have to make the array again.
 
 --> Vectors provide certain methods which can be used to access and utilise the elements of a vector.
+
+### The Science behind how vectors can grow dynamically: 
+
+__> Internally, vectors use a dynamically allocated array to store their elements. This array may need to be 
+reallocated in order to grow in size when new elements are inserted, which implies allocating a new array and 
+moving all elements to it.
+-->  This is a relatively expensive task in terms of processing time, and thus, vectors do not reallocate each
+time an element is added to the container.
+
+__> Instead, vector containers may allocate some extra storage to accommodate for possible growth, and thus the
+container may have an actual capacity greater than the storage strictly needed to contain its elements (i.e., its size).
+--> Libraries can implement different strategies for growth to balance between memory usage and reallocations, but in any
+case, reallocations should only happen at logarithmically growing intervals of size so that the insertion of individual
+elements at the end of the vector can be provided with amortized constant time complexity.
+
+__> Therefore, compared to arrays, vectors CONSUME MORE MEMEORY in exchange for the ability to manage storage and grow 
+dynamically in an efficient way.
 */
 
 template <class T>
