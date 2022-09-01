@@ -3,7 +3,7 @@
 #include<string>
 using namespace std;
 
-void displayMap(map <string, int> &m)
+void displayMap(map <string, int> m)
 {   
     map <string, int> :: iterator iter;
     for (iter = m.begin(); iter != m.end(); iter++)
